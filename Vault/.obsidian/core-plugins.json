@@ -9,11 +9,18 @@
   "tag-pane",
   "page-preview",
   "daily-notes",
+  "templates",
   "note-composer",
   "command-palette",
   "editor-status",
   "bookmarks",
+  "markdown-importer",
+  "random-note",
   "outline",
   "word-count",
-  "file-recovery"
+  "slides",
+  "audio-recorder",
+  "workspaces",
+  "file-recovery",
+  "sync"
 ]

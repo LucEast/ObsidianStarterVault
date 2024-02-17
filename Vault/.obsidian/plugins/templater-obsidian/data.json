@@ -29,9 +29,14 @@
     {
       "folder": "Spaces/Definitions",
       "template": "_data_/templates/general/Definition.md"
+    },
+    {
+      "folder": "Work/OWL-IT/Journal/Entries",
+      "template": "_data_/templates/general/Work journal entry.md"
     }
   ],
   "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
     ""
   ],

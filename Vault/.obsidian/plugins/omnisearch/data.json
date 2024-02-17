@@ -1,9 +1,10 @@
 {
   "useCache": true,
-  "hideExcluded": true,
+  "hideExcluded": false,
   "ignoreDiacritics": true,
   "indexedFileTypes": [],
   "PDFIndexing": false,
+  "officeIndexing": false,
   "imagesIndexing": false,
   "unsupportedFilesIndexing": "no",
   "splitCamelCase": false,
@@ -16,7 +17,7 @@
   "highlight": true,
   "showPreviousQueryResults": true,
   "simpleSearch": false,
-  "fuzziness": "1",
+  "fuzziness": "0",
   "weightBasename": 3,
   "weightDirectory": 2,
   "weightH1": 1.5,
@@ -25,6 +26,8 @@
   "weightUnmarkedTags": 1.1,
   "httpApiEnabled": false,
   "httpApiPort": "51361",
-  "welcomeMessage": "1.10.1",
-  "verboseLogging": false
+  "httpApiNotice": true,
+  "welcomeMessage": "1.21.0",
+  "verboseLogging": false,
+  "dataloomIndexing": false
 }
