@@ -40,28 +40,52 @@ Link:: <% tp.file.cursor(1) %>
 
 
 ## Actions
-```button
-name + Add lecture
-type note(<% `${fileProjectRoot}` %>/Lectures/unnamed lecture) template
-action learning/Course lecture
-templater true
-class tailwind-button-white
+```meta-bind-button
+label: + Create Lecture
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/learning/Course lecture.md
+    folderPath: "<% `${fileProjectRoot}` %>/Lectures"
+    fileName: "unnamed lecture"
+    openNote: true
+
 ```
 <%* if(includeFolderBasedAssignments == true) { %>
-```button
-name + Add assignment
-type note(<% `${fileProjectRoot}` %>/Assignments/unnamed assignment) template
-action learning/Course assignment
-templater true
-class tailwind-button-white
+```meta-bind-button
+label: + Add Assignment
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/learning/Course assignment.md
+    folderPath: "<% `${fileProjectRoot}` %>/Lectures"
+    fileName: "unnamed assignment"
+    openNote: true
+
 ```
 <%* }  %>
-```button
-name + Add note
-type note(<% `${fileProjectRoot}` %>/Notes/unnamed note) template
-action learning/Course note
-templater true
-class tailwind-button-white
+```meta-bind-button
+label: + Add Note
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/learning/Course note.md
+    folderPath: "<% `${fileProjectRoot}` %>/Notes"
+    fileName: "unnamed note"
+    openNote: true
+
 ```
 
 

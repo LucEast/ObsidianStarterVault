@@ -4,7 +4,7 @@ date_modified: 2023-07-21
 document_type: concept
 tags: concept 
 ---
-[[Concept Board/Concept Board|Concept Board]] / **[[Concept Board/Concepts/Vertical Hydroponics|Vertical Hydroponics]]**
+[[Concept Board|Concept Board]] / **[[Concept Board/Concepts/Vertical Hydroponics|Vertical Hydroponics]]**
 # Vertical Hydroponics
 **Overview**
 Concept type:: 
@@ -29,4 +29,4 @@ Description:: An automated vertical hydroponic system to grow plants indoors.
 
 
 ---
-[[Concept Board/Concept Board|Concept Board]] / **[[Concept Board/Concepts/Vertical Hydroponics|Vertical Hydroponics]]**
+[[Concept Board|Concept Board]] / **[[Concept Board/Concepts/Vertical Hydroponics|Vertical Hydroponics]]**

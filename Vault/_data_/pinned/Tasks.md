@@ -19,6 +19,5 @@ not done
 group by folder
 path does not include _data_
 sort by priority
-short mode
 ```
 

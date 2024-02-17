@@ -7,9 +7,10 @@ description: List of all courses and learning activities.
 document_type: dashboard
 include_in_navbar: true
 navbar_name: Learning
-tags: dashboard learning
+tags: 
+- " #dashboard " 
+- " #learning "
 ---
-
 ```dataviewjs
 let navbar = [];
 let loadingMessage = dv.el("span", "**Loading navigation...**", {attr: {style: "font-size:13px; color:gray"}});
@@ -50,12 +51,14 @@ if(filteredPages.values.length > 0){
 # Learning
 Courses, lectures, workshops, and anything related to learning.
 
-```button
-name + Add course
-type note(Learning/untitled course) template
-action learning/Course setup
-templater true
-class tailwind-button-white
+```meta-bind-button
+style: default
+label: + Add course
+actions:
+  - type: templaterCreateNote
+    templateFile: "_data_/templates/learning/Course setup.md"
+    folderPath: Learning
+    openNote: true
 ```
 
 ### Courses
@@ -79,7 +82,7 @@ for (let group of dv.pages('"Learning" and #sub-dashboard and #course').groupBy(
 }
 ```
 
-### Completed
+#### Completed
 ```dataviewjs
 for (let group of dv.pages('"Learning" and #sub-dashboard and #course').groupBy(p => p.note)) {
     let filteredRows = group.rows.filter(k => k['completed'] === true);

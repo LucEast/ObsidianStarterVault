@@ -9,7 +9,6 @@ include_in_navbar: true
 navbar_name: Concept Board
 tags: dashboard concept-board
 ---
-
 ```dataviewjs
 let navbar = [];
 let loadingMessage = dv.el("span", "**Loading navigation...**", {attr: {style: "font-size:13px; color:gray"}});
@@ -50,14 +49,22 @@ if(filteredPages.values.length > 0){
 # Concept Board
 Collection of short concepts and ideas, once a concept has been further developed it can be migrated into a project.
 
-```button
-name + Add concept
-type note(Concept Board/Concepts/untitled) template
-action general/Empty page
-templater true
-class tailwind-button-white
-```
 
+```meta-bind-button
+label: + Add concept
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/general/Empty page.md
+    folderPath: Concept Board/Concepts
+    fileName: "untitled"
+    openNote: true
+
+```
 
 ## Concepts
 ```dataviewjs

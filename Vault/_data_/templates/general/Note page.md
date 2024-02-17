@@ -13,20 +13,21 @@
 	const filePath = tp.file.path(true);
 	let fileObject = this.app.vault.getAbstractFileByPath(filePath);
 	let description = await tp.system.prompt("Note description (press enter to skip)");
-	let tagsCleaned = "note";
+	let tagsCleaned = '- " #note "\n';
 	let tags = await tp.system.prompt("Note tags (separate with comma, press enter to skip)");
 	tags = tags.split(",");
 	for(let i=0; i<tags.length; i++){
-		tagsCleaned += ` ${tags[i].toLowerCase().trim().replaceAll(" ", "-")}`;
+		tagsCleaned += `- " #${tags[i].toLowerCase().trim().replaceAll(" ", "-")} "\n`;
 	}
 _%>
 <% "---" %>
 date_created: <% `${tp.date.now("YYYY-MM-DD")}` %>
 date_modified: <% `${tp.date.now("YYYY-MM-DD")}` %>
 document_type: note
-tags: <% `${tagsCleaned}` %>
+tags: 
+<% `${tagsCleaned}` %>
 <% "---" %>
-[[Notes Dashboard|Notes Dashboard]] / **<% `[[${filePath.slice(0,-3)}|${fileObject.basename}]]` %>**
+[[!Notes Dashboard|!Notes Dashboard]] / **<% `[[${filePath.slice(0,-3)}|${fileObject.basename}]]` %>**
 # <% `${title}` %>
 **Overview**
 Description:: <% `${description}` %>
@@ -36,4 +37,4 @@ Description:: <% `${description}` %>
 
 
 ---
-[[Notes Dashboard|Notes Dashboard]] / **<% `[[${filePath.slice(0,-3)}|${fileObject.basename}]]` %>**
+[[!Notes Dashboard|!Notes Dashboard]] / **<% `[[${filePath.slice(0,-3)}|${fileObject.basename}]]` %>**

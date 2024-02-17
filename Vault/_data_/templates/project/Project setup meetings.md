@@ -15,12 +15,21 @@ tags: <% `${fileObject.path.split("/")[1].toLowerCase().replaceAll(" ", "-").tri
 <% `[[${fileProjectRoot}/Home|Home]]` %> | <% `**[[${fileProjectRoot}/Meetings/All Meetings|Meetings]]**` %> | <% `[[${fileProjectRoot}/Notes/All Notes|Notes]]` %> | <% `[[${fileProjectRoot}/References|References]]` %>
 # Meetings
 **Create meeting**
-```button
-name + Add meeting
-type note(<% `${fileProjectRoot}` %>/Meetings/untitled meeting) template
-action project/Project meeting
-templater true
-class tailwind-button-white
+
+```meta-bind-button
+label: + Create Meeting
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/project/Project meeting.md
+    folderPath: "<% `${fileProjectRoot}` %>/Meetings"
+    fileName: "untitled meeting"
+    openNote: true
+
 ```
 ```dataviewjs
 for (let group of dv.pages('"<% `${fileProjectRoot}` %>/Meetings" and !#meetings').groupBy(p => p.meeting)) {
@@ -33,6 +42,7 @@ for (let group of dv.pages('"<% `${fileProjectRoot}` %>/Meetings" and !#meetings
 			k.file.ctime.year+"-"+k.file.ctime.month+"-"+k.file.ctime.day
 			]))}
 ```
+
 
 ---
 <% `[[${fileProjectRoot}/Home|Home]]` %> | <% `**[[${fileProjectRoot}/Meetings/All Meetings|Meetings]]**` %> | <% `[[${fileProjectRoot}/Notes/All Notes|Notes]]` %> | <% `[[${fileProjectRoot}/References|References]]` %>

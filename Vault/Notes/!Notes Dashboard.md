@@ -9,7 +9,6 @@ include_in_navbar: true
 navbar_name: Notes
 tags: dashboard note
 ---
-
 ```dataviewjs
 let navbar = [];
 let loadingMessage = dv.el("span", "**Loading navigation...**", {attr: {style: "font-size:13px; color:gray"}});
@@ -50,11 +49,20 @@ if(filteredPages.values.length > 0){
 # Notes Home
 Collection of general atomic notes.
 
-```button
-name + Add note
-type note(Notes/untitled) template
-action general/Empty page
-class tailwind-button-white
+```meta-bind-button
+label: + Add Note
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/general/Empty page.md
+    folderPath: Notes
+    fileName: "untitled"
+    openNote: true
+
 ```
 
 **Collection of general notes**

@@ -16,12 +16,20 @@ tags: <% `${fileObject.path.split("/")[1].toLowerCase().replaceAll(" ", "-").tri
 <% `[[${fileProjectRoot}/Home|Home]]` %> | <% `[[${fileProjectRoot}/Meetings/All Meetings|Meetings]]` %> | <% `**[[${fileProjectRoot}/Notes/All Notes|Notes]]**` %> | <% `[[${fileProjectRoot}/References|References]]` %>
 # Notes
 **Create new note**
-```button
-name + Add note
-type note(<% `${fileProjectRoot}` %>/Notes/untitled note) template
-action project/Project note
-templater true
-class tailwind-button-white
+```meta-bind-button
+label: + Create Note
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/project/Project note.md
+    folderPath: "<% `${fileProjectRoot}` %>/Notes"
+    fileName: "untitled note"
+    openNote: true
+
 ```
 **Flat view**
 ```dataviewjs

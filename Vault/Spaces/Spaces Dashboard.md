@@ -6,9 +6,10 @@ description: Collection of other spaces
 document_type: dashboard
 include_in_navbar: true
 navbar_name: Spaces
-tags: dashboard spaces
+tags:
+  - dashboard
+  - spaces
 ---
-
 ```dataviewjs
 let navbar = [];
 let loadingMessage = dv.el("span", "**Loading navigation...**", {attr: {style: "font-size:13px; color:gray"}});
@@ -47,14 +48,21 @@ if(filteredPages.values.length > 0){
 }
 ```
 # Spaces
-```button
-name + Add space
-type note(Spaces/unnamed space) template
-action spaces/Space home
-templater true
-class tailwind-button-white
-```
+```meta-bind-button
+label: + Add Space
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/spaces/Space home.md
+    folderPath: "Spaces"
+    fileName: "unnamed space"
+    openNote: true
 
+```
 
 ## Dashboards
 ```dataviewjs
@@ -69,7 +77,7 @@ for (let group of dv.pages('"Spaces" and #dashboard and !"${dv.current().file.pa
 			]))}
 ```
 
-
+---
 ## Books
 Collection of books and book notes.
 Books read: `$= dv.pages('"Spaces/Books" and !#dashboard').where(page => page.status =="read").length`
@@ -77,11 +85,17 @@ Books currently reading: `$= dv.pages('"Spaces/Books" and !#dashboard').where(pa
 Total number of books: `$= dv.pages('"Spaces/Books" and !#dashboard').length`
 
 **Add a new book**
-```button
-name + Add book
-type command
-action Book Search: Create new book note
-class tailwind-button-white
+```meta-bind-button
+label: + Add Book
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: command
+    command: obsidian-media-db-plugin:open-media-db-search-modal-with-book
+
 ```
 
 **Table of books**
@@ -100,14 +114,123 @@ for (let group of dv.pages('"Spaces/Books" and !#dashboard').groupBy(p => p.book
 
 
 ---
+## Movies/Series
+Collection of movies and series.
+Movies/Series watched: `$= dv.pages('"Spaces/Movies/Entries" and !#dashboard').where(page => page.watched ==true).length`
+Total number of movies/series: `$= dv.pages('"Spaces/Movies/Entries" and !#dashboard').length`
 
+**Add a new movie**/series
+
+```meta-bind-button
+label: + Add Movie
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: command
+    command: obsidian-media-db-plugin:open-media-db-search-modal-with-movie
+```
+
+```meta-bind-button
+label: + Add Series
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: command
+    command: obsidian-media-db-plugin:open-media-db-search-modal-with-series
+```
+
+**Table of movies**
+```dataviewjs
+for (let group of dv.pages('"Spaces/Books" and !#dashboard').groupBy(p => p.book)) {
+	dv.table(["Cover", "Title", "Category", "Status"], 
+		group.rows 
+			.sort(k => k.file.ctime, 'desc')
+			.map(k => [
+			("![|100](" + k['cover'] + ")"),
+			k.file.link, 
+			k['category'],
+			k['status']
+			]))}
+```
+```dataview
+table without id 
+	("![](" + image + ")") as Image,
+	file.link as Title,
+	string(year) as Year, 
+	"by " + director as Director,
+	"⭐ " + scoreImdb as "⭐ IMDB",
+	rating
+from #mediaDB/tv/movies or #mediaDB/tv/series  
+where image != null and file.name != "movie template"
+```
+
+---
+## Games
+Collection of Games.
+Games played: `$= dv.pages('"Spaces/Games/Entries" and !#dashboard').where(page => page.played ==true).length`
+Total number of movies/series: `$= dv.pages('"Spaces/Games/Entries" and !#dashboard').length`
+
+**Add a new game
+
+```meta-bind-button
+label: + Add Game
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: command
+    command: obsidian-media-db-plugin:open-media-db-search-modal-with-game
+```
+
+**Table of games**
+```dataviewjs
+for (let group of dv.pages('"Spaces/Books" and !#dashboard').groupBy(p => p.book)) {
+	dv.table(["Cover", "Title", "Category", "Status"], 
+		group.rows 
+			.sort(k => k.file.ctime, 'desc')
+			.map(k => [
+			("![|100](" + k['cover'] + ")"),
+			k.file.link, 
+			k['category'],
+			k['status']
+			]))}
+```
+```dataview
+table without id 
+	("![](" + image + ")") as Image,
+	file.link as Title,
+	string(year) as Year, 
+	"by " + director as Director,
+	"⭐ " + scoreImdb as "⭐ IMDB",
+	rating
+from #mediaDB/tv/movies or #mediaDB/tv/series  
+where image != null and file.name != "movie template"
+```
+
+---
 ## Contacts
-```button
-name + Add contact
-type note(Spaces/Contacts/unnamed contact) template
-action general/contact
-templater true
-class tailwind-button-white
+```meta-bind-button
+label: + Add Contact
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/general/Contact.md
+    folderPath: Spaces/Contacts
+    fileName: unnamed contact
+    openNote: true
+
 ```
 
 **Table of contacts**

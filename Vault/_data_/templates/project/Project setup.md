@@ -44,12 +44,20 @@ dv.taskList(dv.pages('"<% `${fileProjectRoot}` %>"').file.tasks .where(t => !t.c
 ```
 
 ## Meetings
-```button
-name + Add meeting
-type note(<% `${fileProjectRoot}` %>/Meetings/untitled meeting) template
-action project/Project meeting
-templater true
-class tailwind-button-white
+```meta-bind-button
+label: + Add Note
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/project/Project meeting.md
+    folderPath: "<% `${fileProjectRoot}` %>/Meetings"
+    fileName: "untitled meeting"
+    openNote: true
+
 ```
 ```dataviewjs
 for(let group of dv.pages('"<% `${fileProjectRoot}` %>/Meetings" and !#meetings').limit(10).groupBy(p => p.meeting)) {
@@ -66,12 +74,20 @@ for(let group of dv.pages('"<% `${fileProjectRoot}` %>/Meetings" and !#meetings'
 <% `*[[${fileProjectRoot}/Meetings/All Meetings|View all meetings →]]*` %>
 
 ## Notes
-```button
-name + Add note
-type note(<% `${fileProjectRoot}` %>/Notes/untitled note) template
-action project/Project note
-templater true
-class tailwind-button-white
+```meta-bind-button
+label: + Add Note
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/project/Project note.md
+    folderPath: "<% `${fileProjectRoot}` %>/Notes"
+    fileName: "unnamed note"
+    openNote: true
+
 ```
 ```dataviewjs
 for(let group of dv.pages('"<% `${fileProjectRoot}` %>/Notes" and !#dashboard and !#notes').limit(10).groupBy(p => p.note)) {

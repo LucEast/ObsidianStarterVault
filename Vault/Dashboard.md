@@ -1,23 +1,64 @@
 ---
 banner: "![[banner-dashboard.jpg]]"
+banner_title: Home
+banner_icon: 🏠
+tags:
+- " #dashboard"
+alias: homepage
 include_in_navbar: true
 navbar_name: Dashboard
-tags: dashboard
 ---
 
-**[[Dashboard|Dashboard]]** | [[Concept Board/Concept Board|Concept Board]] | [[Journal/Journal Dashboard|Journal]] | [[Learning/Learning Dashboard|Learning]] | [[Notes/Notes Dashboard|Notes]] | [[Personal/Personal Dashboard|Personal]] | [[Projects/Projects|Projects]] | [[Resources/Resources Dashboard|Resources]] | [[Spaces/Spaces Dashboard|Spaces]]
+```dataviewjs
+let navbar = [];
+let loadingMessage = dv.el("span", "**Loading navigation...**", {attr: {style: "font-size:13px; color:gray"}});
+
+let allPages = dv.pages("#dashboard").sort(page => page.file.folder, "asc");
+let filteredPages = allPages.filter(p => 
+    p.file.tags.values.includes("#dashboard") && p?.include_in_navbar == true
+);
+
+for(let page of filteredPages){
+    let navItem = '';
+    let navName = 'Untitled';
+    let navLink = '';
+
+    if(page.navbar_name === undefined){
+        navName = page.file.name;
+    } else {
+        navName = page.navbar_name;
+    }
+    navLink = page.file.path;
+
+    // Format the nav  item link
+    if(dv.current().file.path === page.file.path){
+        navItem = `**[[${navLink}|${navName}]]**`
+    } else {
+        navItem = `[[${navLink}|${navName}]]`
+    }
+
+    navbar.push(navItem)
+}
+
+dv.paragraph(navbar.join(' | '))
+
+if(filteredPages.values.length > 0){
+    loadingMessage.remove();
+}
+```
 # Dashboard
 >[!multi-column]
 >>[!blank-container]
 >>## 🏠  Navigation
->>[[Concept Board/Concept Board|💡  Concept Board →]]
->>[[Journal/Journal Dashboard|📘 Journal →]]
->>[[Learning/Learning Dashboard|🎓  Learning →]]
->>[[Notes Dashboard|🗒️  Notes →]]
+>>[[Concept Board|💡  Concept Board →]]
+>>[[Journal Dashboard|📘 Journal →]]
+>>[[Learning Dashboard|🎓  Learning →]]
+>>[[!Notes Dashboard|🗒️  Notes →]]
 >>[[Projects/Projects|📐  Projects →]]
 >>[[Personal Dashboard|🔒  Personal →]]
->>[[Resources/Resources Dashboard|ℹ️  Resources →]]
->>[[Spaces/Spaces Dashboard|📦  Spaces →]]
+>>[[Resources Dashboard|ℹ️  Resources →]]
+>>[[Spaces Dashboard|📦  Spaces →]]
+>>[[Work Home|💼 Work Dashboard → ]]
 >
 >>[!blank-container]
 >>## 📐  Projects (`$=dv.pages('"Projects" and #project').length`)
@@ -30,35 +71,15 @@ tags: dashboard
 >>}
 >>dv.list(projectList)
 >>```
----
->[!multi-column]
->>[!blank-container]
->>### 🚀 Upcoming Launches
->>```dataviewjs
->>function construct_elements(data) {
->>for(let i=0; i<data.length; i++){
->>	let missions = [];
->>	for(let j=0; j<data[i].missions.length; j++){missions.push(data[i].missions[j].name)}
->>	dv.el("div", 
->>	`<div class="tailwind"><div class='block py-2'><div class="text-xl font-bold text-gray-800">${data[i].name}<small class="float-right text-gray-600 font-semibold text-sm pl-2">${data[i].date_str}</small></div> <div class="text-sm font-semibold text-gray-600">Vehicle: ${data[i].vehicle.name}</div> <div class="text-sm font-semibold text-gray-600">Missions: ${missions}</div> <div class="text-sm text-gray-600"> ${data[i].launch_description} </div> </div> </div>
->>	`
->>	)
->>}
->>}
->>let response = await fetch('https://fdo.rocketlaunch.live/json/launches/next/5') 
->>response.json().then(j => construct_elements(j.result))
->>```
 >
->>[!blank-container]
->>### &emsp;🛰️Space Image of the Day
->>```dataviewjs
->>const {NASAImageOfTheDay} = customJS;
->>let element = this.container.createEl('div', {cls: ["tailwind"]});
->>let apiKey = "PSrdswa5IKTJeSc007kTh8Vg6Y4A8mrxyIIHTeGp";
->>await NASAImageOfTheDay.getImage(element, apiKey);
->>```
-
----
+>> [!blank-container]
+>> ## Open Tasks 📅
+>> ```dataviewjs
+>> dv.taskList(dv.pages('-"Templates" and -"Work" and -#work').file.tasks
+>> .where(t => !t.completed && t.status != "-" && !t.text.includes("@frank") &&
+>> !t.text.includes("#task")
+>> ))
+>> ```
 ### ✏️  Recently Changed
 ```dataviewjs
 function converteTime(time){
@@ -77,12 +98,13 @@ function converteTime(time){
 }
 
 for (let group of dv.pages('!"_data_"').sort(k => k.file.mtime, 'desc').limit(10).groupBy(p => p.page)) {
-	dv.table(["Name", "Date Modified", ""], 
+	dv.table(["Name", "Date Modified", "Mentions", ""], 
 		group.rows
 			.sort(k => k.file.mtime, 'desc')
 			.map(k => [
 			k.file.link, 
 			converteTime(Date.now()-k.file.mtime),
+			k.file.inlinks.length,
 			`<small>[[${k.file.path}|View →]]</small>`
 			]))}
 ```
@@ -93,18 +115,40 @@ Number of notes: `$=dv.pages('"Notes" and !#dashboard').length`
 Number of concepts: `$=dv.pages('"Concept Board" and !#dashboard').length`
 
 ---
+```dataviewjs
+let navbar = [];
+let loadingMessage = dv.el("span", "**Loading navigation...**", {attr: {style: "font-size:13px; color:gray"}});
 
-### 📰 Recent News
-```dataviewjs
-const {News} = customJS;
-let element = this.container.createEl('div', {cls: ["tailwind"]});
-let newsCategory = 'stocks';
-let articleCount = '6';
-let apiKey = 'e40a3e9b49a4248f96e15459daa4a434';
-await News.listNews(element, newsCategory, articleCount, apiKey);
-```
----
-```dataviewjs
-const {Navbar} = customJS;
-await Navbar.createNavbar(app, dv); 
+let allPages = dv.pages("#dashboard").sort(page => page.file.folder, "asc");
+let filteredPages = allPages.filter(p => 
+    p.file.tags.values.includes("#dashboard") && p?.include_in_navbar == true
+);
+
+for(let page of filteredPages){
+    let navItem = '';
+    let navName = 'Untitled';
+    let navLink = '';
+
+    if(page.navbar_name === undefined){
+        navName = page.file.name;
+    } else {
+        navName = page.navbar_name;
+    }
+    navLink = page.file.path;
+
+    // Format the nav  item link
+    if(dv.current().file.path === page.file.path){
+        navItem = `**[[${navLink}|${navName}]]**`
+    } else {
+        navItem = `[[${navLink}|${navName}]]`
+    }
+
+    navbar.push(navItem)
+}
+
+dv.paragraph(navbar.join(' | '))
+
+if(filteredPages.values.length > 0){
+    loadingMessage.remove();
+}
 ```

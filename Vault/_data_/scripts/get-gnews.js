@@ -1,9 +1,11 @@
 class News {
-    listNews(element, newsCategory, articleCount, apiKey) {
+    listNews(element, newsCategory, newslang, newsCountry, articleCount, apiKey) {
         let apikey = apiKey;
         let category = newsCategory
+        let lang = newslang
+        let country = newsCountry
         let count = articleCount
-        let url = 'https://gnews.io/api/v4/search?q=' + category + '&token=' + apikey + '&lang=en&country=us&max=' + count;
+        let url = 'https://gnews.io/api/v4/search?q=' + category + '&lang=' + lang + '&country=' + country + '&token=' + apikey + '&max=' + count;
 
         function formatArticle(articleImage, articleTitle, publishedDate, publishingSource, articleContent, articleUrl){
             let articleHTML = '';

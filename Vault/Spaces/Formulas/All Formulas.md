@@ -9,14 +9,21 @@ tags: dashboard formula
 # All Formulas
 Collection of math formulas and equations.
 
-```button
-name + Add formula
-type note(Spaces/Formulas/untitled formula) template
-action general/math formula
-templater true
-class tailwind-button-white
-```
+```meta-bind-button
+label: + Add Formula
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: templaterCreateNote
+    templateFile: _data_/templates/general/Math formula.md
+    folderPath: Spaces/Formulas
+    fileName: untitled formula
+    openNote: true
 
+```
 
 ## Formulas
 ```dataviewjs

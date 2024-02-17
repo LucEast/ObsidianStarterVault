@@ -7,7 +7,10 @@ description: List of journal entries.
 document_type: dashboard
 include_in_navbar: true
 navbar_name: Journal
-tags: dashboard journal
+tags: 
+- " #category/daily "
+- " #dashboard " 
+- " #journal "
 ---
 
 ```dataviewjs
@@ -50,12 +53,17 @@ if(filteredPages.values.length > 0){
 # Journal Entries
 Explore your collection of journal entries.
 
-```button
-name + Add journal entry
-type command
-action Daily notes: Open today's daily note
-templater true
-class tailwind-button-white
+```meta-bind-button
+label: + Add journal entry
+hidden: false
+class: ""
+tooltip: ""
+id: ""
+style: default
+actions:
+  - type: command
+    command: daily-notes
+
 ```
 
 **Table of journal entries**

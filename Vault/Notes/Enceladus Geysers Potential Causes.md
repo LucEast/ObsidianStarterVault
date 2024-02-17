@@ -4,7 +4,7 @@ date_modified: 2023-07-21
 document_type: note
 tags: note enceladus geysers
 ---
-[[Notes Dashboard|Notes Dashboard]] / **[[Enceladus Geysers Potential Causes|Enceladus Geysers Potential Causes]]**
+[[!Notes Dashboard|!Notes Dashboard]] / **[[Enceladus Geysers Potential Causes|Enceladus Geysers Potential Causes]]**
 # Enceladus geysers potential causes
 **Overview**
 Description:: Geysers on Enceladus are potentially caused by cooling cycles, tidal forces, pressure, frictional heating...
@@ -14,4 +14,4 @@ The geysers on Enceladus are likely caused by tidal heating, a process where gra
 
 
 ---
-[[Notes Dashboard|Notes Dashboard]] / **[[Enceladus Geysers Potential Causes|Enceladus Geysers Potential Causes]]**
+[[!Notes Dashboard|!Notes Dashboard]] / **[[Enceladus Geysers Potential Causes|Enceladus Geysers Potential Causes]]**

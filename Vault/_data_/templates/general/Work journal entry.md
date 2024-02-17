@@ -5,11 +5,10 @@ _%>
 <% "---" %>
 date_created: <% tp.file.creation_date() %>
 date_modified: <% tp.file.last_modified_date() %>
-document_type: journal
+document_type: work
 tags: 
-- " #category/daily  " 
+- " #work  " 
 <% "---" %>
-
 ```dataviewjs
 /*
     previous/next note by date for Daily Notes
@@ -41,14 +40,11 @@ nav.push(next ? '[[' + next[0] + ']]' : none);
 dv.paragraph(nav[0] + ' ← ' + nav[1] + ' → ' + nav[2]);
 ```
 
-[[Journal/Journal Dashboard|Journal]] / **<% `[[${filePath.slice(0,-3)}|${fileObject.basename}]]` %>**
+[[Work journal Dashboard|Work Journal]] / **<% `[[${filePath.slice(0,-3)}|${fileObject.basename}]]` %>**
 <% `# ${fileObject.basename}` %>
 
 > [!important] Significant Event
 > Event:: 
-
-> [!quote]+
-<% tp.web.daily_quote() %>
 
 > [!todo]
 > ```dataviewjs
@@ -65,9 +61,11 @@ dv.paragraph(nav[0] + ' ← ' + nav[1] + ' → ' + nav[2]);
 > }
 > ```
 
->[!Notes] 
-
 <% tp.file.cursor(1) %>
 
+>[!Notes] 
+
+
+
 ---
-[[Journal/Journal Dashboard|Journal]] / **<% `[[${filePath.slice(0,-3)}|${fileObject.basename}]]` %>**
+[[Work journal Dashboard|Work Journal]] / **<% `[[${filePath.slice(0,-3)}|${fileObject.basename}]]` %>** 
