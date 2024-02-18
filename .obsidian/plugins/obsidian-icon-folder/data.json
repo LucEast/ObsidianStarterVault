@@ -1,0 +1,55 @@
+{
+  "settings": {
+    "migrated": 4,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 20,
+    "emojiStyle": "twemoji",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "RiBox2Line",
+      "FabTwitter",
+      "FasBriefcase",
+      "FasFileCode",
+      "FasHouse",
+      "FasInbox",
+      "FasToolbox",
+      "FasUserLarge",
+      "FasPerson",
+      "FasDiagramProject"
+    ],
+    "recentlyUsedIconsSize": 10,
+    "rules": [
+      {
+        "rule": "_attachment",
+        "icon": "FasPaperclip",
+        "for": "everything",
+        "order": 0
+      }
+    ],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": true,
+    "iconsInNotesEnabled": true,
+    "iconIdentifier": ":"
+  },
+  "notes": "FarNote-sticky",
+  "_drawings": "FasPen",
+  "Work": "FasBriefcase",
+  "Learning": "FasSchool",
+  "Dashboard.md": "FasHouse",
+  "Journal": "FarCalendarDays",
+  "Notes": "FarNoteSticky",
+  "Concept Board": "FarLightbulb",
+  "Spaces": "FabSquarespace",
+  "Projects": "FasDiagramProject",
+  "Personal": "FasUserLarge",
+  "Resources": "FasToolbox",
+  "Inbox.md": "FasInbox"
+}

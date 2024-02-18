@@ -16,8 +16,7 @@
 
 ---
 
-
-<img align="right" width="500" height="auto" src="https://github.com/SoRobby/ObsidianStarterVault/assets/16641866/d9879f75-a767-4e5c-8981-d26622207220" alt="vault-preview-dashboard">
+<img align="right" width="500" height="auto" src="https://user-images.githubusercontent.com/16641866/255501605-d9879f75-a767-4e5c-8981-d26622207220.png" alt="vault-preview-dashboard">
 
 
 ## Table of Contents
@@ -340,6 +339,7 @@ There are several DataviewJS and JavaScript components.
 6. Theme Picker
 7. Hover Editor
 8. Periodic and Spaced
+9. Automatically reveal active file
 
 
 ## Themes

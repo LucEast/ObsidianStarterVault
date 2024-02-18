@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1685087351122,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1685087393861,
+          "path": "Dashboard.md",
+          "title": "Dashboard"
+        },
+        {
+          "type": "file",
+          "ctime": 1685091214417,
+          "path": "Home/Tasks.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1690317444442,
+          "path": "Learning/Learning Dashboard.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1690317505124,
+          "path": "Journal/Journal Dashboard.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1690318126421,
+          "path": "Concept Board/Concept Board.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1690318149942,
+          "path": "Notes/!Notes Dashboard.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1690318205964,
+          "path": "Projects/Projects.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1690318709941,
+          "path": "Spaces/Games/Games Dashboard.md"
+        }
+      ],
+      "title": "Home"
+    },
+    {
+      "type": "group",
+      "ctime": 1684836141179,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1684836173411,
+          "path": "Technologien/Containers/Kubernetes/Kubernetes.md"
+        }
+      ],
+      "title": "Technologie"
+    },
+    {
+      "type": "group",
+      "ctime": 1685784805012,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1685784815620,
+          "path": "Omnivore/2023-06-03/Bug Bounty - How To Earn A Living - HackerOne.md"
+        }
+      ],
+      "title": "Hacking"
+    },
+    {
+      "type": "group",
+      "ctime": 1699369423082,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1699369432614,
+          "path": "Work/Journal/Work journal Dashboard.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1699369451210,
+          "path": "Work/Work Home.md"
+        }
+      ],
+      "title": "Work"
+    }
+  ]
+}

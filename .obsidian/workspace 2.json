@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "9f35e4b3758b58cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "a2f21621480235bb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c26d61d1b682ca66",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ac61a0eae7715084",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd021b6301d4ce49",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bcc5c23cf572b9a0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a54680473e3421ce",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#study",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "132ec3c504475cd3",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fa946ca43c0f0442",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa7140b798f0656e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "524486d8c7ded1a7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bbfa996ee12504b7",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 2,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": true,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.858338819509145,
+                  "close": true
+                }
+              }
+            }
+          },
+          {
+            "id": "7c64c45ed3a7c813",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bacae158f9469679",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "85ee669ad28c7927",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "af6072673c3b5f2a",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "bcf22321a356eba2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4164215dfab6f848",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 341.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-projects:Open projects": false,
+      "templater-obsidian:Templater": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "c26d61d1b682ca66",
+  "lastOpenFiles": [
+    "study/studynotes overview.md",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/1. Grundlagen der Betriebssysteme.md",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/3. Rechnernetze.md",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/_Zusammenfassung Betriebssysteme.md",
+    "study/courses/Untitled.canvas",
+    "study",
+    "Dataview test.md",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/attachments/Pasted image 20230422182413.png",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/attachments/Pasted image 20230422181119.png",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/attachments/Pasted image 20230422180010.png",
+    "_drawings",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/attachments/Pasted image 20230422172338.png",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/Pasted image 20230422172220.png.md",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/attachments/Pasted image 20230422172220.png",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/attachments/Pasted image 20230421210405.png",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/1.1 Grundlegender Aufbau von Computersystemen.md",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/attachments/Pasted image 20230421201159.png",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/Rechenwerk.md",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/attachments",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/Pasted image 20230421201126.png",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/Pasted image 20230421201051.png",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/Betriebssysteme, Rechnernetze und verteilte Systeme.md",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/1.2 Die Rolle des Betriebssystems.md",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme/1.3 Prozesse und Threads.md",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/1.1 Grundlagen der Betriebssysteme/1.0 Grundlagen der Betriebssysteme.md",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme/1 Grundlagen der Betriebssysteme",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/Untitled Database 670515d184614d078722ce5aa3883f7e.md",
+    "1-Semester/Betriebssysteme, Rechnernetze und verteilte Systeme/Betriebssysteme, Rechnernetze und verteilte System 8d6642fc5ef84b97a7e4ce091fd00d5f.md",
+    "study/courses/Betriebssysteme, Rechnernetze und verteilte Systeme",
+    "study/courses"
+  ]
+}

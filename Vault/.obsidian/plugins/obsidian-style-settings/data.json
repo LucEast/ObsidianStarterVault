@@ -1,8 +1,0 @@
-{
-  "minimal-style@@sidebar-tabs-style": "sidebar-tabs-default",
-  "minimal-style@@row-lines": true,
-  "minimal-style@@row-hover": true,
-  "modular-css-layout-wv@@wide-table-global": false,
-  "modular-css-layout-wv@@wide-dataview-global": false,
-  "minimal-style@@maximize-tables-off": "maximize-tables-off"
-}
