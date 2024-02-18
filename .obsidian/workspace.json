@@ -110,7 +110,7 @@
                   "localBacklinks": true,
                   "localForelinks": true,
                   "localInterlinks": true,
-                  "showTags": true,
+                  "showTags": false,
                   "showAttachments": false,
                   "hideUnresolved": false,
                   "collapse-color-groups": true,
@@ -125,7 +125,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.37378445262383514,
+                  "scale": 0.27484343119129523,
                   "close": true
                 }
               }
@@ -243,11 +243,15 @@
       "obsidian-media-db-plugin:Add new Media DB entry": false
     }
   },
-  "active": "86a99dd6fe0ff284",
+  "active": "bbfa996ee12504b7",
   "lastOpenFiles": [
+    "Element Structure and Formats.md",
+    "Inbox.md",
+    "Inbox/Inbox.md",
+    "Dashboard.md",
+    "README.md",
     "Work/Work Home.md",
     "Work/Journal/Work journal Dashboard.md",
-    "Dashboard.md",
     "Projects/test/Home.md",
     "Spaces/Games/Games Dashboard.md",
     "Spaces/Games/Entries/Minecraft (2009).md",
@@ -275,10 +279,6 @@
     "Spaces/Definitions/Periapsis.md",
     "_data_/templates/spaces/Space home.md",
     "Resources/Resources Dashboard.md",
-    "Projects/Top Secret Project/Meetings/All Meetings.md",
-    "Projects/Top Secret Project/Tasks.md",
-    "Projects/Top Secret Project/References.md",
-    "Projects/test/Tasks.md",
     "Projects/test/Notes",
     "Projects/test/Meetings",
     "Projects/test",
