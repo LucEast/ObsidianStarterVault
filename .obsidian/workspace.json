@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1533eebb24c77076",
+        "id": "d5895ddf96fe83c3",
         "type": "tabs",
         "children": [
           {
-            "id": "86a99dd6fe0ff284",
+            "id": "aeec06858a480222",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dashboard.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dashboard.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Dashboard.md",
+                "file": "README.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dashboard.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dashboard.md"
+                "file": "README.md"
               }
             }
           },
@@ -243,19 +243,22 @@
       "obsidian-media-db-plugin:Add new Media DB entry": false
     }
   },
-  "active": "bbfa996ee12504b7",
+  "active": "aeec06858a480222",
   "lastOpenFiles": [
-    "Element Structure and Formats.md",
-    "Inbox.md",
-    "Inbox/Inbox.md",
-    "Dashboard.md",
+    "www.omdbapi.com.md",
     "README.md",
+    "Dashboard.md",
+    "Inbox.md",
+    "Spaces/Contacts/Sample Contact.md",
+    "Spaces/Spaces Dashboard.md",
+    "Spaces/Contacts/sample contact contact.md",
+    "Element Structure and Formats.md",
+    "Inbox/Inbox.md",
     "Work/Work Home.md",
     "Work/Journal/Work journal Dashboard.md",
     "Projects/test/Home.md",
     "Spaces/Games/Games Dashboard.md",
     "Spaces/Games/Entries/Minecraft (2009).md",
-    "Spaces/Spaces Dashboard.md",
     "Spaces/Movies/Movies Dashboard.md",
     "Spaces/Games/Entries",
     "Spaces/Games",
@@ -276,9 +279,6 @@
     "Spaces/Movies",
     "Work/Journal/Entries/2024-02-17.md",
     "Work/_data_/media/Pasted image 20231103104733.png",
-    "Spaces/Definitions/Periapsis.md",
-    "_data_/templates/spaces/Space home.md",
-    "Resources/Resources Dashboard.md",
     "Projects/test/Notes",
     "Projects/test/Meetings",
     "Projects/test",

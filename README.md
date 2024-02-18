@@ -50,6 +50,8 @@
 	- [ ] Add an API key to the _Dashboard > Recent News_ section and set the value of `apiKey`, you can modify other properties `newsCategory` and `articlCount`, where `newsCategory` is the cateogry of news you want to list (e.g., "space", "technology", etc...) and `articleCount` refers to the number of articles to list (note: it's recommended to keep article count at 6 or less). You can get a free API key from [GNews](https://gnews.io/)
 - [ ] Setup NASA Image of the Day
 	- [ ] Add an API key to the _Dashboard > Space Image_ of the Day section and set the value of `apiKey`. You can get a free API key from [NASA APIs](https://api.nasa.gov/)
+- [ ] Setup MediaDB Plugin
+	- [ ] Add OMDb API Key within MediaDB plugin settings. You can get a free API key from [omdbapi](https://www.omdbapi.com/apikey.aspx?__EVENTTARGET=freeAcct&__EVENTARGUMENT=&__LASTFOCUS=&__VIEWSTATE=%2FwEPDwUKLTIwNDY4MTIzNQ9kFgYCAQ9kFgICBw8WAh4HVmlzaWJsZWhkAgIPFgIfAGhkAgMPFgIfAGhkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYDBQtwYXRyZW9uQWNjdAUIZnJlZUFjY3QFCGZyZWVBY2N0oCxKYG7xaZwy2ktIrVmWGdWzxj%2FDhHQaAqqFYTiRTDE%3D&__VIEWSTATEGENERATOR=5E550F58&__EVENTVALIDATION=%2FwEdAAU%2BO86JjTqdg0yhuGR2tBukmSzhXfnlWWVdWIamVouVTzfZJuQDpLVS6HZFWq5fYpioiDjxFjSdCQfbG0SWduXFd8BcWGH1ot0k0SO7CfuulHLL4j%2B3qCcW3ReXhfb4KKsSs3zlQ%2B48KY6Qzm7wzZbR&at=freeAcct&Email=)
 
 
 ## Structure
